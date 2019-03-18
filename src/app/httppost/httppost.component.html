@@ -1,0 +1,38 @@
+
+<div class="container">
+<form  (ngSubmit)="onSubmit()" #myForm="ngForm">
+  
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text"  class="form-control"  [(ngModel)]='emp.name'  name="name"><br>
+    </div> 
+
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text"  class="form-control"  [(ngModel)]='emp.email'  
+      name="email" ><br>
+    </div> 
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tel"  class="form-control"  [(ngModel)]='emp.phone'  
+      
+      name="phone" ><br>
+    </div> 
+
+<button class="btn btn-primary" type="submit">Add</button>
+</form>
+<br><br>
+
+
+
+
+ <h3> Users</h3>
+ <ul class="items">
+ <li  (click)="onSelect(n)" *ngFor="let e of emps">
+ <a>{{e.name}}--{{e.email}}--{{e.phone}}</a><br><br>
+ </li>
+ </ul>
+
+</div>
